@@ -1,22 +1,22 @@
 "use strict";
-swInit();
+(function () {
+    swInit();
 
-function swInit() {
-    if (!"serviceWorker" in navigator) {
-        console.warn("SW fail!");
-        return;
+    function swInit() {
+        if (!"serviceWorker" in navigator) {
+            console.warn("SW fail!");
+            return;
+        }
+        window.addEventListener("load", function () {
+            navigator.serviceWorker
+                .register("/sw.js")
+                .then((registration) => console.log("SW done. Scope: ", registration.scope))
+                .catch(err => console.warn(err))
+                .finally(main);
+        });
     }
-    window.addEventListener("load", function () {
-        navigator.serviceWorker
-            .register("/sw.js")
-            .then((registration) => console.log("SW done. Scope: ", registration.scope))
-            .catch(err => console.warn(err))
-            .finally(main);
-    });
-}
 
-function main(){
-    define(function (require) {
-        console.log("I'm work!", require);
-    });
-}
+    function main(){
+        console.log("I'm work!");
+    }
+})();
