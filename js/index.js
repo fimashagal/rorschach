@@ -16,7 +16,12 @@ function swInit() {
 }
 
 function main(){
-    const glide = new Glide('.glide');
+    const glide = new Glide('.glide', {
+        type: 'carousel',
+        startAt: 0,
+        perView: 1
+    });
+
     const application = document.querySelector(".application");
 
     glide.on('mount.after', function() {
