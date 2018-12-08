@@ -16,14 +16,12 @@
 
 .application:before,
 .application::before {
-    content: "Rorschach";
+    content: "Loading...";
     display: block;
     position: absolute;
-    font-weight: 200;
-    font-size: 2em;
+    font-weight: 300;
+    font-size: 1em;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    text-transform: uppercase;
-    letter-spacing: .1em;
 }
