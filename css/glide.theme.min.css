@@ -1,6 +1,7 @@
 .glide {
     z-index: 1;
     background: #ffffff;
+    position: relative;
 }
 
 
