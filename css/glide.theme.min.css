@@ -100,4 +100,17 @@
 
 .glide__slide {
     text-align: center;
+    position: relative;
+}
+
+.glide__slide:before,
+.glide__slide::before {
+    display: block;
+    content: "";
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 1;
 }
