@@ -1,6 +1,10 @@
 .preload {
     opacity: 0;
     transition: opacity .5s ease-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .preload.on {
