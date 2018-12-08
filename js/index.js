@@ -1,6 +1,5 @@
 "use strict";
-(function () {
-
+define(function (require) {
     swInit();
 
     function swInit() {
@@ -20,5 +19,4 @@
     function main(){
         console.log("I'm work!");
     }
-
-})();
+});
