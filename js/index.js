@@ -22,10 +22,11 @@ function main(){
         perView: 1
     });
 
-    const application = document.querySelector(".application");
+    const application = document.querySelector(".application"),
+          preload = application.querySelector(".preload");
 
     glide.on('mount.after', function() {
-        application.querySelector('.glide').classList.add("on");
+        preload.classList.add("on");
     });
 
     glide.mount();

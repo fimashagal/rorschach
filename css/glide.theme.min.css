@@ -1,13 +1,8 @@
 .glide {
-    opacity: 0;
-    transition: opacity .5s ease-out;
     z-index: 1;
     background: #ffffff;
 }
 
-.glide.on {
-    opacity: 1;
-}
 
 .glide__arrow {
     position: absolute;

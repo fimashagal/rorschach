@@ -4,4 +4,6 @@
 @import "glide.core.min.css";
 @import "glide.theme.min.css";
 @import "application.css";
+@import "preload.css";
 @import "stain.css";
+@import "guide.css";
