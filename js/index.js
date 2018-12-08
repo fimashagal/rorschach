@@ -35,7 +35,11 @@ function main(){
     });
 
     glide.on("run.after", function () {
-        guide.classList.add("off");
+        if(touchVirginity){
+            guide.classList.add("off");
+            touchVirginity = false;
+        }
+
     });
 
     glide.mount();
