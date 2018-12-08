@@ -16,6 +16,8 @@ function swInit() {
 }
 
 function main(){
+    let touchVirginity = true;
+
     const glide = new Glide('.glide', {
         type: 'carousel',
         startAt: 0,
@@ -23,10 +25,15 @@ function main(){
     });
 
     const application = document.querySelector(".application"),
-          preload = application.querySelector(".preload");
+          preload = application.querySelector(".preload"),
+          guide = application.querySelector(".guide");
 
     glide.on('mount.after', function() {
         preload.classList.add("on");
+    });
+
+    glide.on("run.after", function () {
+        guide.classList.add("off");
     });
 
     glide.mount();
