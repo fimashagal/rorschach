@@ -1,5 +1,4 @@
 "use strict";
-
 swInit();
 
 function swInit() {
@@ -17,5 +16,15 @@ function swInit() {
 }
 
 function main(){
-    console.log("I'm work!");
+    const glide = new Glide('.glide');
+    const application = document.querySelector(".application");
+
+    glide.on('mount.after', function() {
+        application.querySelector('.glide').classList.add("on");
+    });
+
+    glide.mount();
+
+
+
 }

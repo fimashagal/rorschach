@@ -4,6 +4,26 @@
     overflow: hidden;
     background: #ffffff;
     font-family: 'Montserrat', sans-serif;
+    color:#333333;
     font-size: 16px;
     line-height: 1.16;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.application:before,
+.application::before {
+    content: "Rorschach";
+    display: block;
+    position: absolute;
+    font-weight: 200;
+    font-size: 2em;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-transform: uppercase;
+    letter-spacing: .1em;
 }
