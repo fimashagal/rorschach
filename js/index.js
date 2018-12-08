@@ -28,7 +28,8 @@ function main(){
 
     const application = document.querySelector(".application"),
           preload = application.querySelector(".preload"),
-          guide = application.querySelector(".guide");
+          guide = application.querySelector(".guide"),
+          advice = application.querySelector(".advice");
 
     glide.on('mount.after', function() {
         preload.classList.add("on");
@@ -37,6 +38,7 @@ function main(){
     glide.on("run.after", function () {
         if(touchVirginity){
             guide.classList.add("off");
+            setTimeout(() => advice.classList.add("on"), 2000);
             touchVirginity = false;
         }
 

@@ -1,0 +1,14 @@
+.advice {
+    position: fixed;
+    bottom: 1em;
+    left: 0;
+    text-align: center;
+    z-index: 1;
+    width: 100%;
+    opacity: 0;
+    transition: opacity .25s ease-in;
+}
+
+.advice.on {
+    opacity: 1;
+}
